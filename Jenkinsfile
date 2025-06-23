@@ -7,7 +7,7 @@ pipeline {
             }
         }
         stage('test') {
-            when {
+            when {  ##this ensures the branch that is being cloned##
                 expression {
                     BRANCH_NAME == 'test'
                 }
