@@ -1,17 +1,16 @@
 pipeline {
     agent { label 'build-agent'}
     stages {
+        stage('veryfying maven') {
+            steps { sh 'mvn -version'
+            }
+        }
         stage('build') {
             steps {
                 echo 'building the application!'
             }
         }
         stage('test') {
-            when {
-                expression {
-                    env.BRANCH_NAME == 'test'
-                }
-            }
             steps {
                 echo 'testing the application!'
             }
