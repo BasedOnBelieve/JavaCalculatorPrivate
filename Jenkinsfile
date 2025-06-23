@@ -7,7 +7,7 @@ pipeline {
             }
         }
         stage('test') {
-            when {  ##this ensures the branch that is being cloned##
+            when {
                 expression {
                     env.BRANCH_NAME == 'test'
                 }
