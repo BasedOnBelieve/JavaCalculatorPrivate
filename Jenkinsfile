@@ -11,8 +11,6 @@ pipeline {
         stage('build') {
             steps {
                 echo 'building the application!'
-            }
-            step {
                 sh 'mvn package'
             }
         }
