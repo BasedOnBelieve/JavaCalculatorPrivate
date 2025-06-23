@@ -1,7 +1,7 @@
 pipeline {
     agent { label 'build-agent'}
     tools {
-        maven 'maven-3.9.10'
+        maven 'maven'
     }
     stages {
         stage('veryfying maven') {
